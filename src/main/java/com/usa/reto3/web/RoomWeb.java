@@ -61,6 +61,7 @@ public class RoomWeb {
     
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int id) {
         return servicios.deleteHabitaciones(id);
     }
